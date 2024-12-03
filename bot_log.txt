@@ -1,0 +1,725 @@
+2024-12-03 18:01:58,541 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 18:01:58,620 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:12:37,197 - aiogram.event - INFO - Update id=871565775 is handled. Duration 496 ms by bot id=7600282342
+2024-12-03 18:12:47,559 - aiogram.event - INFO - Update id=871565776 is not handled. Duration 88 ms by bot id=7600282342
+2024-12-03 18:12:47,560 - aiogram.event - ERROR - Cause exception while process update id=871565776 by bot id=7600282342
+FileNotFoundError: [Errno 2] No such file or directory: 'data/users.json'
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 36, in cmd_start
+    user = db.get_user(user_id)
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\database.py", line 39, in get_user
+    self.save_data()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\database.py", line 25, in save_data
+    with open("data/users.json", "w", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/users.json'
+2024-12-03 18:16:07,331 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 18:16:07,584 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:47:50,476 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 18:47:50,553 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:47:53,991 - aiogram.event - INFO - Update id=871565780 is handled. Duration 379 ms by bot id=7600282342
+2024-12-03 18:48:23,611 - aiogram.event - INFO - Update id=871565781 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 18:49:32,817 - aiogram.event - INFO - Update id=871565782 is handled. Duration 389 ms by bot id=7600282342
+2024-12-03 18:49:37,596 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 18:49:37,602 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 18:49:37,783 - aiogram.event - INFO - Update id=871565783 is handled. Duration 899 ms by bot id=7600282342
+2024-12-03 18:49:55,837 - aiogram.event - INFO - Update id=871565784 is handled. Duration 282 ms by bot id=7600282342
+2024-12-03 18:49:59,891 - aiogram.event - INFO - Update id=871565785 is not handled. Duration 2 ms by bot id=7600282342
+2024-12-03 18:49:59,891 - aiogram.event - ERROR - Cause exception while process update id=871565785 by bot id=7600282342
+AttributeError: type object 'ContentGeneration' has no attribute 'generate_image_dalle'
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 99, in process_imagine
+    image = await ContentGeneration.generate_image_dalle(message.text)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ContentGeneration' has no attribute 'generate_image_dalle'. Did you mean: 'generate_image'?
+2024-12-03 18:51:49,708 - aiogram.event - INFO - Update id=871565786 is not handled. Duration 3 ms by bot id=7600282342
+2024-12-03 18:51:49,709 - aiogram.event - ERROR - Cause exception while process update id=871565786 by bot id=7600282342
+AttributeError: type object 'ContentGeneration' has no attribute 'generate_image_dalle'
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 99, in process_imagine
+    image = await ContentGeneration.generate_image_dalle(message.text)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ContentGeneration' has no attribute 'generate_image_dalle'. Did you mean: 'generate_image'?
+2024-12-03 18:51:55,598 - aiogram.event - INFO - Update id=871565787 is handled. Duration 392 ms by bot id=7600282342
+2024-12-03 18:51:57,677 - aiogram.event - INFO - Update id=871565788 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 18:52:00,352 - aiogram.event - INFO - Update id=871565789 is handled. Duration 246 ms by bot id=7600282342
+2024-12-03 18:52:31,327 - aiogram.event - INFO - Update id=871565790 is not handled. Duration 2 ms by bot id=7600282342
+2024-12-03 18:52:35,556 - aiogram.event - INFO - Update id=871565791 is handled. Duration 281 ms by bot id=7600282342
+2024-12-03 18:52:39,307 - aiogram.event - INFO - Update id=871565792 is not handled. Duration 2 ms by bot id=7600282342
+2024-12-03 18:52:42,228 - aiogram.event - INFO - Update id=871565793 is handled. Duration 120 ms by bot id=7600282342
+2024-12-03 18:52:46,018 - aiogram.event - INFO - Update id=871565794 is handled. Duration 271 ms by bot id=7600282342
+2024-12-03 18:52:46,920 - aiogram.event - INFO - Update id=871565795 is handled. Duration 184 ms by bot id=7600282342
+2024-12-03 18:52:50,625 - aiogram.event - INFO - Update id=871565796 is not handled. Duration 2 ms by bot id=7600282342
+2024-12-03 18:52:53,296 - aiogram.event - INFO - Update id=871565797 is handled. Duration 116 ms by bot id=7600282342
+2024-12-03 18:52:56,955 - aiogram.event - INFO - Update id=871565798 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 18:52:56,956 - aiogram.event - ERROR - Cause exception while process update id=871565798 by bot id=7600282342
+AttributeError: 'Bot' object has no attribute 'username'
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 156, in cmd_invite
+    invite_link = f"https://t.me/{message.bot.username}?start={user_id}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'username'
+2024-12-03 18:53:10,536 - aiogram.event - INFO - Update id=871565799 is handled. Duration 241 ms by bot id=7600282342
+2024-12-03 18:53:11,800 - aiogram.event - INFO - Update id=871565800 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 18:53:11,801 - aiogram.event - ERROR - Cause exception while process update id=871565800 by bot id=7600282342
+AttributeError: type object 'ContentGeneration' has no attribute 'generate_image_stability'
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 121, in process_image
+    image = await ContentGeneration.generate_image_stability(message.text)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'ContentGeneration' has no attribute 'generate_image_stability'
+2024-12-03 18:53:42,771 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 18:53:43,027 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:53:52,452 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 18:53:52,529 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:54:15,042 - aiogram.event - INFO - Update id=871565801 is handled. Duration 467 ms by bot id=7600282342
+2024-12-03 18:54:16,132 - aiogram.event - INFO - Update id=871565802 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 18:54:17,341 - aiogram.event - INFO - Update id=871565803 is handled. Duration 137 ms by bot id=7600282342
+2024-12-03 18:54:19,929 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 18:54:19,934 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 18:54:20,048 - aiogram.event - INFO - Update id=871565804 is handled. Duration 689 ms by bot id=7600282342
+2024-12-03 18:54:23,427 - aiogram.event - INFO - Update id=871565805 is handled. Duration 194 ms by bot id=7600282342
+2024-12-03 18:54:25,429 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 403 Forbidden"
+2024-12-03 18:54:25,430 - root - ERROR - Ошибка генерации изображения: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 18:54:25,538 - aiogram.event - INFO - Update id=871565806 is handled. Duration 593 ms by bot id=7600282342
+2024-12-03 18:55:10,439 - aiogram.event - INFO - Update id=871565807 is handled. Duration 298 ms by bot id=7600282342
+2024-12-03 18:55:24,195 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 18:55:24,460 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:55:34,460 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 18:55:34,546 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 18:55:48,268 - aiogram.event - INFO - Update id=871565808 is handled. Duration 419 ms by bot id=7600282342
+2024-12-03 18:55:50,341 - aiogram.event - INFO - Update id=871565809 is handled. Duration 128 ms by bot id=7600282342
+2024-12-03 18:55:55,272 - aiogram.event - INFO - Update id=871565810 is handled. Duration 118 ms by bot id=7600282342
+2024-12-03 18:56:34,619 - aiogram.event - INFO - Update id=871565811 is handled. Duration 253 ms by bot id=7600282342
+2024-12-03 19:07:37,160 - aiogram.event - INFO - Update id=871565812 is handled. Duration 336 ms by bot id=7600282342
+2024-12-03 19:14:05,974 - aiogram.event - INFO - Update id=871565813 is handled. Duration 396 ms by bot id=7600282342
+2024-12-03 19:14:08,414 - aiogram.event - INFO - Update id=871565814 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 19:14:09,324 - aiogram.event - INFO - Update id=871565815 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 19:14:09,973 - aiogram.event - INFO - Update id=871565816 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 19:14:10,525 - aiogram.event - INFO - Update id=871565817 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 19:14:10,996 - aiogram.event - INFO - Update id=871565818 is not handled. Duration 1 ms by bot id=7600282342
+2024-12-03 19:14:11,275 - aiogram.event - INFO - Update id=871565819 is not handled. Duration 2 ms by bot id=7600282342
+2024-12-03 19:37:55,519 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-12-03 19:37:55,520 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 19:38:06,777 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 19:39:07,273 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-12-03 19:39:07,274 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 19:39:18,527 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 19:49:07,463 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 19:49:07,729 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:49:17,321 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 19:49:17,400 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:50:16,777 - aiogram.event - INFO - Update id=871565821 is handled. Duration 384 ms by bot id=7600282342
+2024-12-03 19:50:22,082 - aiogram.event - INFO - Update id=871565822 is handled. Duration 105 ms by bot id=7600282342
+2024-12-03 19:50:24,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 19:50:24,992 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 19:50:25,178 - aiogram.event - INFO - Update id=871565823 is handled. Duration 608 ms by bot id=7600282342
+2024-12-03 19:50:28,190 - aiogram.event - INFO - Update id=871565824 is handled. Duration 156 ms by bot id=7600282342
+2024-12-03 19:50:29,681 - aiogram.event - INFO - Update id=871565825 is handled. Duration 160 ms by bot id=7600282342
+2024-12-03 19:50:34,853 - aiogram.event - INFO - Update id=871565826 is handled. Duration 149 ms by bot id=7600282342
+2024-12-03 19:51:06,448 - aiogram.event - INFO - Update id=871565827 is handled. Duration 361 ms by bot id=7600282342
+2024-12-03 19:51:14,709 - aiogram.event - INFO - Update id=871565828 is handled. Duration 210 ms by bot id=7600282342
+2024-12-03 19:51:19,669 - aiogram.event - INFO - Update id=871565829 is handled. Duration 208 ms by bot id=7600282342
+2024-12-03 19:52:22,718 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 19:52:22,983 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:52:32,537 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 19:52:32,625 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:52:50,072 - aiogram.event - INFO - Update id=871565830 is handled. Duration 489 ms by bot id=7600282342
+2024-12-03 19:52:55,488 - aiogram.event - INFO - Update id=871565831 is handled. Duration 202 ms by bot id=7600282342
+2024-12-03 19:52:56,258 - aiogram.event - INFO - Update id=871565832 is handled. Duration 176 ms by bot id=7600282342
+2024-12-03 19:52:58,691 - aiogram.event - INFO - Update id=871565833 is handled. Duration 493 ms by bot id=7600282342
+2024-12-03 19:53:05,717 - aiogram.event - INFO - Update id=871565834 is handled. Duration 235 ms by bot id=7600282342
+2024-12-03 19:53:09,201 - aiogram.event - INFO - Update id=871565835 is handled. Duration 130 ms by bot id=7600282342
+2024-12-03 19:53:12,207 - aiogram.event - INFO - Update id=871565836 is handled. Duration 207 ms by bot id=7600282342
+2024-12-03 19:53:13,802 - aiogram.event - INFO - Update id=871565837 is handled. Duration 252 ms by bot id=7600282342
+2024-12-03 19:53:17,419 - aiogram.event - INFO - Update id=871565838 is handled. Duration 116 ms by bot id=7600282342
+2024-12-03 19:53:19,998 - aiogram.event - INFO - Update id=871565839 is not handled. Duration 4 ms by bot id=7600282342
+2024-12-03 19:53:19,999 - aiogram.event - ERROR - Cause exception while process update id=871565839 by bot id=7600282342
+TypeError: Database.add_lesson() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\admin.py", line 79, in process_course_content
+    db.add_lesson(new_lesson_number, new_lesson)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Database.add_lesson() takes 2 positional arguments but 3 were given
+2024-12-03 19:55:01,186 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-12-03 19:55:01,187 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 19:55:12,501 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 19:55:54,359 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 19:55:54,618 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:56:03,799 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 19:56:03,886 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:56:32,920 - aiogram.event - INFO - Update id=871565840 is handled. Duration 341 ms by bot id=7600282342
+2024-12-03 19:56:35,154 - aiogram.event - INFO - Update id=871565841 is handled. Duration 182 ms by bot id=7600282342
+2024-12-03 19:56:36,604 - aiogram.event - INFO - Update id=871565842 is handled. Duration 175 ms by bot id=7600282342
+2024-12-03 19:56:41,683 - aiogram.event - INFO - Update id=871565843 is handled. Duration 290 ms by bot id=7600282342
+2024-12-03 19:56:43,057 - aiogram.event - INFO - Update id=871565844 is not handled. Duration 2 ms by bot id=7600282342
+2024-12-03 19:56:43,058 - aiogram.event - ERROR - Cause exception while process update id=871565844 by bot id=7600282342
+AttributeError: 'Database' object has no attribute 'get_next_lesson_number'
+Traceback (most recent call last):
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 70, in bonus_course
+    await cmd_bonus(message, state)
+  File "C:\Users\ALFA\OneDrive\Desktop\FRILANCE\IN ACTIVE DEVELOPED PROJECTS\ii bots\handlers\user.py", line 149, in cmd_bonus
+    next_lesson = db.get_next_lesson_number()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'get_next_lesson_number'
+2024-12-03 19:57:45,910 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 19:57:46,171 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:57:55,865 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 19:57:55,946 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 19:58:36,303 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-12-03 19:58:36,304 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 19:58:45,316 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 19:58:45,717 - aiogram.event - INFO - Update id=871565845 is handled. Duration 399 ms by bot id=7600282342
+2024-12-03 19:58:55,434 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-12-03 19:58:55,435 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 19:59:06,694 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 19:59:17,309 - aiogram.event - INFO - Update id=871565846 is handled. Duration 567 ms by bot id=7600282342
+2024-12-03 19:59:20,869 - aiogram.event - INFO - Update id=871565847 is handled. Duration 193 ms by bot id=7600282342
+2024-12-03 19:59:44,797 - aiogram.event - INFO - Update id=871565848 is handled. Duration 514 ms by bot id=7600282342
+2024-12-03 19:59:51,162 - aiogram.event - INFO - Update id=871565849 is handled. Duration 226 ms by bot id=7600282342
+2024-12-03 19:59:55,102 - aiogram.event - INFO - Update id=871565850 is handled. Duration 157 ms by bot id=7600282342
+2024-12-03 19:59:59,571 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 403 Forbidden"
+2024-12-03 19:59:59,576 - root - ERROR - Ошибка генерации изображения: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 19:59:59,757 - aiogram.event - INFO - Update id=871565851 is handled. Duration 639 ms by bot id=7600282342
+2024-12-03 20:00:02,610 - aiogram.event - INFO - Update id=871565852 is handled. Duration 254 ms by bot id=7600282342
+2024-12-03 20:00:05,359 - aiogram.event - INFO - Update id=871565853 is handled. Duration 312 ms by bot id=7600282342
+2024-12-03 20:00:09,892 - aiogram.event - INFO - Update id=871565854 is handled. Duration 218 ms by bot id=7600282342
+2024-12-03 20:00:11,239 - aiogram.event - INFO - Update id=871565855 is handled. Duration 296 ms by bot id=7600282342
+2024-12-03 20:00:13,128 - aiogram.event - INFO - Update id=871565856 is handled. Duration 219 ms by bot id=7600282342
+2024-12-03 20:00:18,720 - aiogram.event - INFO - Update id=871565857 is handled. Duration 556 ms by bot id=7600282342
+2024-12-03 20:00:21,309 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 20:00:21,312 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 20:00:21,567 - aiogram.event - INFO - Update id=871565858 is handled. Duration 425 ms by bot id=7600282342
+2024-12-03 20:00:24,642 - aiogram.event - INFO - Update id=871565859 is handled. Duration 206 ms by bot id=7600282342
+2024-12-03 20:01:27,419 - aiogram.event - INFO - Update id=871565860 is handled. Duration 369 ms by bot id=7600282342
+2024-12-03 20:01:32,973 - aiogram.event - INFO - Update id=871565861 is handled. Duration 232 ms by bot id=7600282342
+2024-12-03 20:01:44,448 - aiogram.event - INFO - Update id=871565862 is handled. Duration 158 ms by bot id=7600282342
+2024-12-03 20:02:03,280 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:02:03,526 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:02:12,463 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:02:12,558 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:02:18,324 - aiogram.event - INFO - Update id=871565863 is handled. Duration 377 ms by bot id=7600282342
+2024-12-03 20:02:20,273 - aiogram.event - INFO - Update id=871565864 is handled. Duration 226 ms by bot id=7600282342
+2024-12-03 20:02:25,318 - aiogram.event - INFO - Update id=871565865 is handled. Duration 116 ms by bot id=7600282342
+2024-12-03 20:02:26,433 - aiogram.event - INFO - Update id=871565866 is handled. Duration 144 ms by bot id=7600282342
+2024-12-03 20:02:27,508 - aiogram.event - INFO - Update id=871565867 is handled. Duration 141 ms by bot id=7600282342
+2024-12-03 20:03:17,839 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2024-12-03 20:03:17,840 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 20:03:29,069 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 20:03:43,758 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:03:43,981 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:03:53,465 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:03:53,541 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:03:56,064 - aiogram.event - INFO - Update id=871565869 is handled. Duration 411 ms by bot id=7600282342
+2024-12-03 20:03:57,795 - aiogram.event - INFO - Update id=871565870 is handled. Duration 106 ms by bot id=7600282342
+2024-12-03 20:04:02,112 - aiogram.event - INFO - Update id=871565871 is handled. Duration 208 ms by bot id=7600282342
+2024-12-03 20:05:43,569 - aiogram.event - INFO - Update id=871565872 is handled. Duration 363 ms by bot id=7600282342
+2024-12-03 20:05:46,381 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 20:05:46,387 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 20:05:46,496 - aiogram.event - INFO - Update id=871565873 is handled. Duration 610 ms by bot id=7600282342
+2024-12-03 20:05:50,296 - aiogram.event - INFO - Update id=871565874 is handled. Duration 198 ms by bot id=7600282342
+2024-12-03 20:05:52,351 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 20:05:52,353 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 20:05:52,502 - aiogram.event - INFO - Update id=871565875 is handled. Duration 308 ms by bot id=7600282342
+2024-12-03 20:10:16,622 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:10:16,837 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:10:26,067 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:10:26,144 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:10:26,684 - aiogram.event - INFO - Update id=871565877 is handled. Duration 387 ms by bot id=7600282342
+2024-12-03 20:10:28,966 - aiogram.event - INFO - Update id=871565878 is handled. Duration 149 ms by bot id=7600282342
+2024-12-03 20:10:31,919 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 20:10:31,923 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 20:10:32,023 - aiogram.event - INFO - Update id=871565879 is handled. Duration 435 ms by bot id=7600282342
+2024-12-03 20:10:35,345 - aiogram.event - INFO - Update id=871565880 is handled. Duration 165 ms by bot id=7600282342
+2024-12-03 20:10:45,997 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:10:46,222 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:10:55,202 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:10:55,283 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:11:02,489 - aiogram.event - INFO - Update id=871565883 is handled. Duration 417 ms by bot id=7600282342
+2024-12-03 20:11:07,637 - aiogram.event - INFO - Update id=871565884 is handled. Duration 189 ms by bot id=7600282342
+2024-12-03 20:11:11,322 - aiogram.event - INFO - Update id=871565885 is handled. Duration 347 ms by bot id=7600282342
+2024-12-03 20:11:14,595 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 20:11:14,599 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 20:11:14,726 - aiogram.event - INFO - Update id=871565886 is handled. Duration 385 ms by bot id=7600282342
+2024-12-03 20:14:20,574 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:14:20,790 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:15:03,746 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000026B753E42F0>
+2024-12-03 20:15:37,699 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000229C7D182F0>
+2024-12-03 20:15:47,043 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:15:47,121 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:19:15,259 - aiogram.event - INFO - Update id=871565890 is not handled. Duration 5 ms by bot id=7600282342
+2024-12-03 20:19:18,015 - aiogram.event - INFO - Update id=871565891 is handled. Duration 320 ms by bot id=7600282342
+2024-12-03 20:19:19,373 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"
+2024-12-03 20:19:19,383 - root - ERROR - Ошибка генерации текста: Error code: 403 - {'error': {'code': 'unsupported_country_region_territory', 'message': 'Country, region, or territory not supported', 'param': None, 'type': 'request_forbidden'}}
+2024-12-03 20:19:19,495 - aiogram.event - INFO - Update id=871565892 is handled. Duration 691 ms by bot id=7600282342
+2024-12-03 20:22:06,966 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:22:07,134 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:22:16,692 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:22:16,789 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:22:19,744 - aiogram.event - INFO - Update id=871565893 is handled. Duration 1710 ms by bot id=7600282342
+2024-12-03 20:22:22,573 - aiogram.event - INFO - Update id=871565894 is handled. Duration 131 ms by bot id=7600282342
+2024-12-03 20:22:29,689 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-03 20:22:29,840 - aiogram.event - INFO - Update id=871565895 is handled. Duration 3991 ms by bot id=7600282342
+2024-12-03 20:22:36,048 - aiogram.event - INFO - Update id=871565896 is not handled. Duration 4 ms by bot id=7600282342
+2024-12-03 20:22:37,950 - aiogram.event - INFO - Update id=871565897 is handled. Duration 159 ms by bot id=7600282342
+2024-12-03 20:22:40,548 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-03 20:22:40,805 - aiogram.event - INFO - Update id=871565898 is handled. Duration 1395 ms by bot id=7600282342
+2024-12-03 20:22:52,608 - aiogram.event - INFO - Update id=871565899 is handled. Duration 1919 ms by bot id=7600282342
+2024-12-03 20:23:01,440 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-03 20:23:01,908 - aiogram.event - INFO - Update id=871565900 is handled. Duration 6006 ms by bot id=7600282342
+2024-12-03 20:23:11,154 - aiogram.event - INFO - Update id=871565901 is handled. Duration 186 ms by bot id=7600282342
+2024-12-03 20:23:11,554 - aiogram.event - INFO - Update id=871565902 is handled. Duration 267 ms by bot id=7600282342
+2024-12-03 20:23:11,951 - aiogram.event - INFO - Update id=871565903 is handled. Duration 146 ms by bot id=7600282342
+2024-12-03 20:23:16,095 - aiogram.event - INFO - Update id=871565904 is handled. Duration 274 ms by bot id=7600282342
+2024-12-03 20:23:17,403 - aiogram.event - INFO - Update id=871565905 is handled. Duration 190 ms by bot id=7600282342
+2024-12-03 20:23:27,524 - openai._base_client - INFO - Retrying request to /images/generations in 0.377949 seconds
+2024-12-03 20:23:32,912 - openai._base_client - INFO - Retrying request to /images/generations in 0.964504 seconds
+2024-12-03 20:23:42,584 - aiogram.event - INFO - Update id=871565907 is handled. Duration 509 ms by bot id=7600282342
+2024-12-03 20:23:46,109 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2024-12-03 20:23:46,111 - root - ERROR - Ошибка генерации изображения: name 'requests' is not defined
+2024-12-03 20:23:46,236 - aiogram.event - INFO - Update id=871565906 is handled. Duration 23730 ms by bot id=7600282342
+2024-12-03 20:23:51,063 - aiogram.event - INFO - Update id=871565908 is handled. Duration 127 ms by bot id=7600282342
+2024-12-03 20:23:56,542 - aiogram.event - INFO - Update id=871565909 is handled. Duration 655 ms by bot id=7600282342
+2024-12-03 20:24:10,183 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2024-12-03 20:24:10,185 - root - ERROR - Ошибка генерации изображения: name 'requests' is not defined
+2024-12-03 20:24:10,308 - aiogram.event - INFO - Update id=871565910 is handled. Duration 9297 ms by bot id=7600282342
+2024-12-03 20:24:13,858 - aiogram.event - INFO - Update id=871565911 is handled. Duration 241 ms by bot id=7600282342
+2024-12-03 20:24:22,176 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-03 20:24:22,329 - aiogram.event - INFO - Update id=871565912 is handled. Duration 1016 ms by bot id=7600282342
+2024-12-03 20:24:25,944 - aiogram.event - INFO - Update id=871565913 is handled. Duration 125 ms by bot id=7600282342
+2024-12-03 20:24:33,533 - aiogram.event - INFO - Update id=871565914 is handled. Duration 129 ms by bot id=7600282342
+2024-12-03 20:24:39,705 - aiogram.event - INFO - Update id=871565915 is handled. Duration 1200 ms by bot id=7600282342
+2024-12-03 20:25:17,180 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2024-12-03 20:25:17,181 - root - ERROR - Ошибка генерации изображения: name 'requests' is not defined
+2024-12-03 20:25:18,487 - aiogram.event - INFO - Update id=871565916 is handled. Duration 11901 ms by bot id=7600282342
+2024-12-03 20:26:35,951 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:26:36,150 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:26:53,628 - aiogram.dispatcher - INFO - Start polling
+2024-12-03 20:26:54,475 - aiogram.dispatcher - INFO - Run polling for bot @yarneiro_bot id=7600282342 - 'Нейросети'
+2024-12-03 20:26:56,602 - aiogram.event - INFO - Update id=871565918 is handled. Duration 1749 ms by bot id=7600282342
+2024-12-03 20:26:58,796 - aiogram.event - INFO - Update id=871565919 is handled. Duration 560 ms by bot id=7600282342
+2024-12-03 20:27:06,055 - openai._base_client - INFO - Retrying request to /images/generations in 0.435503 seconds
+2024-12-03 20:27:11,510 - openai._base_client - INFO - Retrying request to /images/generations in 0.942330 seconds
+2024-12-03 20:27:17,470 - root - ERROR - Ошибка генерации изображения: Request timed out.
+2024-12-03 20:27:24,488 - aiogram.event - INFO - Update id=871565920 is handled. Duration 23543 ms by bot id=7600282342
+2024-12-03 20:29:49,317 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2024-12-03 20:29:49,319 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7600282342)
+2024-12-03 20:30:00,579 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7600282342)
+2024-12-03 20:30:38,495 - aiogram.dispatcher - INFO - Polling stopped
+2024-12-03 20:30:38,762 - aiogram.dispatcher - INFO - Polling stopped for bot @yarneiro_bot id=7600282342 - 'Нейросети'
